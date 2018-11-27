@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title>This is AngularJs Framwork</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	</head>
+	 <body>
+		<div ng-controller="myController">
+			<input type="text" ng-model="check">
+			<ul>
+				<li ng-repeat="x in name | filter :check">{{x}}</li>
+			</ul>
+		</div>
+		<script>
+			var app=angular.module('myApp',[]);
+			app.controller('myController',function($scope){
+				$scope.name=['Arafath','Shohan','Hamja','Hamja','Hadi','Pranta','Kawshik'];
+				
+			});
+		</script>
+	</body>
+</html>
